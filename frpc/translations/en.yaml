@@ -1,0 +1,34 @@
+configuration:
+  server_addr:
+    name: FRP server address
+    description: Public IP or domain of the HA remote access platform.
+  server_port:
+    name: FRP server port
+    description: Your dedicated frps port, e.g. 10001.
+  token:
+    name: Auth token
+    description: Your dedicated token. Found on the platform dashboard.
+  ha_local_ip:
+    name: Home Assistant local IP
+    description: Keep 127.0.0.1 for HA OS / Supervised. Use the host IP for HA Container.
+  ha_local_port:
+    name: Home Assistant local port
+    description: Usually 8123.
+  remote_port:
+    name: Remote port
+    description: Your dedicated public port, e.g. 20001.
+  enable_backup:
+    name: Enable cloud backup tunnel
+    description: Maps the cloud backup share into your LAN via stcp.
+  smb_secret:
+    name: Backup tunnel secret
+    description: Must match the smb_secret shown on the platform.
+  smb_bind_addr:
+    name: Backup bind address
+    description: Keep 0.0.0.0 so other add-ons and HA core can reach it.
+  smb_bind_port:
+    name: Backup bind port
+    description: "HA network storage requires 445. Change only if 445 is taken."
+  log_level:
+    name: Log level
+    description: Use debug when troubleshooting.

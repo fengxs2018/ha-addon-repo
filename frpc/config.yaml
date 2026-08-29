@@ -1,0 +1,41 @@
+name: "FRP 客户端 · HA 远程接入"
+version: "1.0.0"
+slug: "ha_remote_frpc"
+description: "连接 HA 远程接入平台：外网访问家里的 Home Assistant，并把自动备份送到云端"
+url: "https://github.com/fengxs2018/ha-addon-repo/tree/main/frpc"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+  - armhf
+  - i386
+init: false
+host_network: true
+startup: application
+boot: auto
+# 需要绑定宿主机 445 端口，供 HA 的网络存储挂载
+image: "ghcr.io/fengxs2018/{arch}-addon-ha_remote_frpc"
+options:
+  server_addr: ""
+  server_port: 10001
+  token: ""
+  ha_local_ip: "127.0.0.1"
+  ha_local_port: 8123
+  remote_port: 20001
+  enable_backup: true
+  smb_secret: ""
+  smb_bind_addr: "0.0.0.0"
+  smb_bind_port: 445
+  log_level: "info"
+schema:
+  server_addr: str
+  server_port: int(1,65535)
+  token: str
+  ha_local_ip: str
+  ha_local_port: int(1,65535)
+  remote_port: int(1,65535)
+  enable_backup: bool
+  smb_secret: str
+  smb_bind_addr: str
+  smb_bind_port: int(1,65535)
+  log_level: list(info|debug|warn|error)

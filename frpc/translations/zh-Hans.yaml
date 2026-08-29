@@ -1,0 +1,34 @@
+configuration:
+  server_addr:
+    name: FRP 服务器地址
+    description: HA 远程接入平台的公网 IP 或域名。
+  server_port:
+    name: FRP 服务器端口
+    description: 你的专属 frps 端口，例如 10001。
+  token:
+    name: 认证 Token
+    description: 你的专属令牌，在平台「控制台」页面获取。
+  ha_local_ip:
+    name: Home Assistant 内网地址
+    description: HA OS / Supervised 保持 127.0.0.1；HA Container 填宿主机 IP。
+  ha_local_port:
+    name: Home Assistant 内网端口
+    description: 一般是 8123。
+  remote_port:
+    name: 外网访问端口
+    description: 你的专属公网端口，例如 20001。
+  enable_backup:
+    name: 启用云端备份隧道
+    description: 通过 stcp 把云端备份盘映射进家庭局域网。
+  smb_secret:
+    name: 备份通道密钥
+    description: 与平台上显示的「备份通道密钥」保持一致。
+  smb_bind_addr:
+    name: 备份监听地址
+    description: 保持 0.0.0.0，其他加载项和 HA 核心才能访问到。
+  smb_bind_port:
+    name: 备份监听端口
+    description: HA 网络存储只支持 445；仅当 445 被占用时才改。
+  log_level:
+    name: 日志级别
+    description: 排查问题时改为 debug。
