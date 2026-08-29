@@ -1,5 +1,11 @@
 # 更新日志
 
+## 1.0.1
+
+- 暂停支持 i386：frp v0.71.0 起官方不再发布 i386 二进制（404）
+- 工作流改用标准 docker buildx + QEMU，弃用已 deprecated 的 home-assistant/builder
+- 5 架构矩阵 → 4 架构（aarch64 / amd64 / armv7 / armhf）
+
 ## 1.0.0
 
 - 初始版本

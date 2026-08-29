@@ -7,13 +7,13 @@
 
 1. 新建仓库（公开），把本目录内容推上去，分支为 `main`。
 
-2. 把下面三处 `fengxs2018` 改成你的 GitHub 用户名 / 组织名：
+2. 把下面三处 `你的账号` 改成你的 GitHub 用户名 / 组织名：
    - `repository.yaml` 的 `url` 和 `maintainer`
    - `frpc/config.yaml` 的 `url`
    - `frpc/config.yaml` 的 `image`
 
 3. 推送后 GitHub Actions 会自动构建 4 个架构的镜像到 GHCR
-   （`ghcr.io/fengxs2018/{arch}-addon-ha_remote_frpc`）。
+   （`ghcr.io/你的账号/{arch}-addon-ha_remote_frpc`）。
    工作流在 `.github/workflows/build-addon.yaml`，需要 `packages: write` 权限（已在文件里声明）。
 
 4. 首次构建完后，到仓库的 **Packages** 设置里把对应包改成 **Public**，
@@ -22,7 +22,7 @@
 5. 服务端门户的 `.env` 里填写：
 
    ```
-   ADDON_REPO_URL=https://github.com/fengxs2018/ha-addon-repo
+   ADDON_REPO_URL=https://github.com/你的账号/ha-addon-repo
    ```
 
    门户的「配置指引」页面就会显示这个地址，客户复制粘贴即可。

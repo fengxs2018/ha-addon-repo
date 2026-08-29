@@ -1,5 +1,5 @@
 name: "FRP 客户端 · HA 远程接入"
-version: "1.0.0"
+version: "1.0.1"
 slug: "ha_remote_frpc"
 description: "连接 HA 远程接入平台：外网访问家里的 Home Assistant，并把自动备份送到云端"
 url: "https://github.com/fengxs2018/ha-addon-repo/tree/main/frpc"
@@ -8,7 +8,7 @@ arch:
   - amd64
   - armv7
   - armhf
-  - i386
+# 注：v0.71.0 起 frp 官方不再发布 i386 二进制，所以本加载项暂停支持 i386
 init: false
 host_network: true
 startup: application
