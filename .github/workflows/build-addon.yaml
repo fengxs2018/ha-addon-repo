@@ -46,5 +46,6 @@ jobs:
           push: true
           build-args: |
             FRP_VERSION=0.71.0
+            BUILD_FROM=alpine:3.21
             BUILD_ARCH=${{ matrix.addon_arch }}
           tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.addon_arch }}-addon-ha_remote_frpc:1.0.0
